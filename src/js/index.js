@@ -12,4 +12,26 @@ import "../styles/index.scss";
 import { Home } from "./component/home.js";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let num = 0;
+const setNum = number => {
+	num = parseInt(number);
+};
+const counter = () => {
+	num += 1;
+	let string = "00000" + num;
+	let num2 = string.slice(-6);
+
+	ReactDOM.render(
+		<Home
+			number1={num2.charAt(0)}
+			number2={num2.charAt(1)}
+			number3={num2.charAt(2)}
+			number4={num2.charAt(3)}
+			number5={num2.charAt(4)}
+			number6={num2.charAt(5)}
+			myFunction={setNum}
+		/>,
+		document.querySelector("#app")
+	);
+};
+setInterval(counter, 1000);

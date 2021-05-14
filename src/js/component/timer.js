@@ -5,14 +5,16 @@ import PropTypes from "prop-types";
 export function Timer(props) {
 	const [userNumTimer, setTimer] = useState(0);
 	return (
-		<div className="container d-flex">
+		<div className="container center">
 			<button
+				className="btn"
 				onClick={() => {
 					props.myFunctionTimer(userNumTimer);
 				}}>
 				Set Timer
 			</button>
 			<input
+				className="input-field"
 				type="number"
 				placeholder="Enter a number"
 				onChange={e => {

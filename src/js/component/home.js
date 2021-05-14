@@ -6,7 +6,7 @@ export function Home(props) {
 	const [userNum, setUserNum] = useState(null);
 
 	return (
-		<div className="container  center">
+		<div className="container center">
 			<button
 				className="btn"
 				onClick={() => {

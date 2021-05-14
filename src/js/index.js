@@ -61,5 +61,5 @@ const timerClock = () => {
 		document.querySelector("#app")
 	);
 };
-setInterval(counter, 1000);
-//setInterval(timerClock, 1000);
+//setInterval(counter, 1000);
+setInterval(timerClock, 1000);

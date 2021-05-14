@@ -9,5 +9,40 @@
     other sylesheets into your bunde as well, e.j:
     
     import 'relative/path/to/stylesheet.scss';
+    
 
 */
+.square {
+    border: 2px solid orangered;
+    border-radius: 5px;
+    background: orange;
+    color: papayawhip;
+    font-size: 1.6rem;
+    font-weight: 500;
+    height: 3.8rem;
+    width: 2.2rem;
+    text-align: center;
+    margin: 15px 1px;
+}
+
+.btn {
+    background: papayawhip;
+    color: orangered;
+    margin: 15px 5px;
+    border-radius: 5px;
+    border: 2px solid orangered;
+    height: 3rem;
+}
+
+.input-field {
+    height: 3rem;
+    margin: 15px 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid darkorange;
+}

@@ -4,26 +4,29 @@ import PropTypes from "prop-types";
 //create your first component
 export function Home(props) {
 	const [userNum, setUserNum] = useState(null);
+
 	return (
-		<div className="container d-flex">
+		<div className="container  center">
 			<button
+				className="btn"
 				onClick={() => {
 					props.myFunction(userNum);
 				}}>
 				Set Number
 			</button>
 			<input
+				className="input-field"
 				type="number"
 				placeholder="Enter a number"
 				onChange={e => {
 					setUserNum(e.target.value);
 				}}></input>
-			<div>{props.number1}</div>
-			<div>{props.number2}</div>
-			<div>{props.number3}</div>
-			<div>{props.number4}</div>
-			<div>{props.number5}</div>
-			<div>{props.number6}</div>
+			<div className="square">{props.number1}</div>
+			<div className="square">{props.number2}</div>
+			<div className="square">{props.number3}</div>
+			<div className="square">{props.number4}</div>
+			<div className="square">{props.number5}</div>
+			<div className="square">{props.number6}</div>
 		</div>
 	);
 }

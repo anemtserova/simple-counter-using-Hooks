@@ -20,7 +20,7 @@ const stopResume = () => {
 };
 
 function clearInput(input) {
-	if (!input.isEmpty()) input = null;
+	if (input) input = null;
 }
 
 const setNum = number => {

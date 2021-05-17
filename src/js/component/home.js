@@ -17,7 +17,7 @@ export function Home(props) {
 
 			<input
 				className="input-field"
-				type="number"
+				type="text"
 				placeholder="Enter a number"
 				onChange={e => {
 					userInput = e.target.value;

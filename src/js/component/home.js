@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 //create your first component
 export function Home(props) {
-	const [userNum, setUserNum] = useState(null);
-
+	const [userNum, setUserNum] = useState(0);
+	let userInput = "";
 	return (
 		<div className="container center">
 			<button
@@ -14,13 +14,33 @@ export function Home(props) {
 				}}>
 				Set Number
 			</button>
+
 			<input
 				className="input-field"
 				type="number"
 				placeholder="Enter a number"
 				onChange={e => {
-					setUserNum(e.target.value);
+					userInput = e.target.value;
+					setUserNum(userInput);
 				}}></input>
+			<button
+				className="btn"
+				onClick={() => {
+					props.startRun();
+				}}>
+				Stop/Resume
+			</button>
+			<button
+				className="btn"
+				onClick={() => {
+					setUserNum(0);
+					props.myFunction(userNum);
+					props.clearInputField(userInput);
+					//props.clearInputField(e.target.value);
+				}}>
+				Reset
+			</button>
+
 			<div className="square">{props.number1}</div>
 			<div className="square">{props.number2}</div>
 			<div className="square">{props.number3}</div>
@@ -38,5 +58,8 @@ Home.propTypes = {
 	number4: PropTypes.string,
 	number5: PropTypes.string,
 	number6: PropTypes.string,
-	myFunction: PropTypes.func
+	myFunction: PropTypes.func,
+	isRunning: PropTypes.bool,
+	startRun: PropTypes.func,
+	clearInputField: PropTypes.func
 };

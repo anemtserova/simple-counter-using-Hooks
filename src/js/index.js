@@ -14,13 +14,14 @@ import { Home } from "./component/home.js";
 //render your react application
 let num = 0;
 let runNum = true;
+let userInput = "";
 
 const stopResume = () => {
 	runNum = !runNum;
 };
 
 function clearInput(input) {
-	if (input) input = null;
+	if (input !== "") input = userInput;
 }
 
 const setNum = number => {

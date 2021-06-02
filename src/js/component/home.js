@@ -33,9 +33,10 @@ export function Home(props) {
 			<button
 				className="btn"
 				onClick={() => {
+					props.clearInputField(userNum);
 					setUserNum(0);
 					props.myFunction(userNum);
-					props.clearInputField(userInput);
+					console.log(userInput);
 					//props.clearInputField(e.target.value);
 				}}>
 				Reset
